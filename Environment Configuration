@@ -1,0 +1,15 @@
+To ensure the network traffic analyzer could accurately capture data, the following virtualized environment was established:
+
+Hypervisor: Oracle VirtualBox.
+
+Host Operating System: Windows.
+
+Guest Operating System: Ubuntu Linux.
+
+Network Adapter: Bridged or NAT Network adapter linked to the host's Ethernet 7 interface.
+
+Packet Capture Driver: Npcap (installed to resolve initial local interface unavailability).
+
+Virtual IP Address: 192.168.1.192 (Ubuntu Guest).
+
+External Target: 142.251.41.174 (Google Server).
