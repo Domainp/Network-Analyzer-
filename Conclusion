@@ -1,0 +1,10 @@
+This laboratory exercise successfully demonstrated the setup, configuration, and execution of a Network Traffic Analyzer within a virtualized infrastructure. By integrating Wireshark with a guest Ubuntu Linux environment, the project moved from a non-functional state (missing drivers) to a fully operational diagnostic tool.
+
+Key Takeaways:
+Infrastructure Reliability: The project proved that the Ubuntu VM could maintain stable external connectivity while its traffic was being actively monitored and recorded.
+
+Technical Proficiency: Resolving the Npcap driver issue highlighted the necessity of understanding the underlying dependencies required for packet-level analysis in a Windows-hosted environment.
+
+Data Validation: The captured ICMP sequences provided empirical proof of the request/reply handshake, validating that the virtual network honors standard networking protocols.
+
+Ultimately, this lab serves as a foundational piece for future cybersecurity tasks, such as intrusion detection and network troubleshooting. The resulting .pcapng file and documented findings stand as a complete record of the network activity between the virtualized guest and the public internet.
