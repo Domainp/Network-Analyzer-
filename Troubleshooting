@@ -1,0 +1,16 @@
+Issue: Interface Invisibility
+Symptoms: Upon launching Wireshark, the "Capture" header displayed no active interfaces, and a yellow warning box appeared stating that no packet capture driver was installed.
+
+Root Cause: The host operating system lacked the Npcap driver, which is required for Wireshark to intercept and "sniff" packets from both physical and virtual network adapters.
+
+Resolution Steps
+Driver Installation: The Npcap installer was downloaded and run with specific configurations to allow for WinPcap API-compatible mode, ensuring compatibility with older networking tools if needed.
+
+Permission Elevation: The application was relaunched as an Administrator. This step was necessary because the Npcap driver requires elevated system permissions to bind to the network stack and monitor low-level traffic.
+
+Service Verification: The Npcap service was manually verified to be running via the command line to ensure it was actively bridging the software to the hardware interfaces.
+
+Verification of Fix
+Interface Population: After the driver installation and system restart, the interface list successfully populated, showing several "Local Area Connections" and the primary host adapter.
+
+Traffic Identification: Ethernet 7 was confirmed as the correct capture target by correlating the real-time traffic spikes in the Wireshark GUI with the ping activity initiated within the Ubuntu VM.
