@@ -1,0 +1,14 @@
+Project Title: Network Traffic Analyzer for Virtual Environments
+
+Overview
+This project demonstrates the implementation and use of a network traffic analyzer to monitor data flow within a virtualized infrastructure. Using Wireshark as the primary analysis tool, I successfully captured and interpreted real-time network packets transmitted between an Ubuntu Linux guest virtual machine and external internet gateways.
+
+The lab highlights the critical relationship between virtualized hardware and the host operating system, specifically focusing on:
+
+Driver Integration: Successfully resolving "unavailable interface" errors by configuring the Npcap packet capture driver on the Windows host.
+
+Live Traffic Monitoring: Capturing ICMP (Ping) requests and replies to verify end-to-end connectivity.
+
+Protocol Analysis: Inspecting Layer 3 (IP) and Layer 4 (ICMP) headers to validate correct packet routing and addressing.
+
+This repository serves as a practical application of networking fundamentals, proving that virtual environments can be effectively audited and monitored for security and troubleshooting purposes.
