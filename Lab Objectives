@@ -1,0 +1,13 @@
+The primary goal of this project is to establish a functional network monitoring environment to observe and interpret the data moving in and out of a virtual machine. The specific objectives include:
+
+Virtual Network Configuration: Set up and verify a bridged or NAT network connection within Oracle VirtualBox to allow an Ubuntu Linux guest to communicate with external web servers.
+
+Packet Capture Driver Implementation: Resolve local interface invisibility by successfully installing and configuring the Npcap driver on the Windows host system.
+
+Live Traffic Acquisition: Utilize Wireshark to capture real-time data packets from the virtualized network interface during active network tasks, such as ICMP pings.
+
+Data Filtering and Isolation: Apply specific display filters (e.g., icmp and ip.addr) to isolate relevant VM traffic from background host system noise.
+
+Protocol Analysis: Inspect captured packets at the Data Link (Layer 2), Network (Layer 3), and Transport/Control (Layer 4) levels to verify the integrity of the OSI model within a virtualized environment.
+
+Documentation and Proof of Work: Export captured data into .pcapng format and document findings via screenshots for academic and professional reporting.
