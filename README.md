@@ -16,3 +16,4 @@ Network Setup: The VM is configured to use a network adapter that bridges to the
 The capture confirms that the network analyzer is properly observing the traffic flow. The consistent replies from 
 the destination server prove that the virtual network is stable and the packet capture driver is accurately recording
 data without loss.
+![Network Capture Proof](./Screenshot 2026-03-03 164854.jpg)
