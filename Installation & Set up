@@ -1,0 +1,19 @@
+To successfully run the network analyzer, the environment required a bridge between the physical hardware and the analysis software. Below are the detailed steps taken to resolve the "Local interfaces unavailable" error and prepare the system for capture.
+
+Step 1: Diagnosing the Missing Driver
+Upon first launching Wireshark, the interface list was empty, and a yellow warning box appeared stating: "Local interfaces are unavailable because no packet capture driver is installed". This occurred because Wireshark requires Npcap (the Windows packet capture library) to "sniff" traffic from the network adapter.
+
+Step 2: Installing Npcap
+Download: The Npcap installer was accessed via the direct link provided within the Wireshark warning message.
+
+Configuration: During the installation process, it was vital to select "Install Npcap in WinPcap API-compatible Mode" to ensure full compatibility with the analyzer.
+
+Service Activation: After installation, the Npcap service was verified to be running to allow the software to hook into the host's network stack.
+
+Step 3: Verifying the Interface List
+Restarting Wireshark: The application was closed and restarted with Administrative Privileges to ensure the new driver could bind to the physical and virtual adapters.
+
+Identifying Active Traffic: Once the list populated, several "Local Area Connections" appeared. Ethernet 7 was identified as the correct interface by observing the live traffic "sparkline" (the jagged graph) that matched the activity of the Ubuntu VM.
+
+Step 4: Final Interface Selection
+By double-clicking Ethernet 7, the analyzer began capturing the live stream of data, transitioning the project from the setup phase to the active analysis phase.
