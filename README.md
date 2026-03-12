@@ -17,3 +17,43 @@ The capture confirms that the network analyzer is properly observing the traffic
 the destination server prove that the virtual network is stable and the packet capture driver is accurately recording
 data without loss.
 ![Network Capture Proof](./Screenshot 2026-03-03 164854.jpg)
+# 🛡️ Network Traffic Analyzer for Virtual Environments
+![Cybersecurity](https://img.shields.io/badge/Domain-Cybersecurity-red)
+![Linux](https://img.shields.io/badge/OS-Ubuntu%20Linux-orange)
+![Wireshark](https://img.shields.io/badge/Tool-Wireshark-blue)
+
+## 🎯 Project Overview
+This project demonstrates advanced proficiency in **Network Security Monitoring (NSM)**. Using an Ubuntu Linux VM, I captured and analyzed live network traffic to validate secure communication and identify protocols like ICMP.
+
+---
+
+## 🛠️ Tech Stack & Tools
+* **Operating System:** Ubuntu 22.04 LTS (Oracle VirtualBox)
+* **Packet Analysis:** Wireshark
+* **Drivers:** Npcap (Packet Capture Library)
+* **Protocols Studied:** ICMP, TCP, DNS
+
+---
+
+## 🚀 Lab Objectives
+1.  **Environment Hardening:** Configured a virtual environment to bridge physical and virtual network adapters.
+2.  **Traffic Interception:** Successfully installed the Npcap driver to enable promiscuous mode for packet sniffing.
+3.  **Protocol Analysis:** Interpreted **ICMP (Internet Control Message Protocol)** traffic between a guest VM and external servers to verify connectivity and stability.
+
+---
+
+## 🔍 Forensic Findings & Proof
+The capture confirms that the analyzer is properly observing traffic flow. Consistent replies prove a stable virtual network and accurate data recording without packet loss.
+
+### 🖼️ Evidence Capture
+> [!IMPORTANT]
+> Below is the visual proof of the successful network capture and analysis.
+
+![Network Capture Proof](./Screenshot%202026-03-03%20164854.jpg)
+
+---
+
+## 🛠️ Troubleshooting & Resolution
+* **Issue:** Wireshark failed to see the network interface.
+* **Root Cause:** Improper bridging between VirtualBox and the host Ethernet adapter.
+* **Fix:** Reconfigured the VM Network Settings to "Bridged Adapter" and selected the specific Ethernet 7 interface.
