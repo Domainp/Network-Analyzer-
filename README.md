@@ -36,7 +36,39 @@ The capture confirms that the analyzer is properly observing traffic flow. Consi
 ![Network Capture Proof](./Screenshot%202026-03-03%20164854.jpg)
 
 ---
+## Technical Project Report: Network Traffic Analyzer for VMs
+Developer: Domainp
+Date: March 17, 2026
+Environment: Wireshark inside Virtual Machines
 
+### 1. Project Overview
+Objective: To engineer a virtualized network environment capable of capturing, filtering, and analyzing real-time data packets between multiple Linux distributions.
+
+Problem Solved: Traditional physical networking makes it difficult to inspect internal "East-West" traffic. This lab creates a transparent gateway to monitor how data moves between isolated virtual machines.
+
+Core Tech Stack:
+
+Hypervisor: VirtualBox / VMware
+
+Operating Systems: Kali Linux (Attacker/Analyzer), Ubuntu Server (Target), Linux Mint (User)
+
+Tools: Wireshark, tcpdump, Bash scripting, NAT Networking
+
+### 2. Implementation & Configuration
+Network Architecture: Configured a custom NAT Network to allow inter-VM communication while maintaining isolation from the host machine.
+
+Traffic Capture: Deployed tcpdump on the gateway interface to capture raw packet data into .pcap files for deep-dive analysis.
+
+Automation: Developed a Bash script to perform automated system health checks across the VM infrastructure, ensuring all network interfaces were up and reporting correctly before starting the analysis.
+
+Version Control: Managed the lab workbench using VS Code integrated with Git to track configuration changes.
+
+### 3. Technical Findings (The "Deep Dive")
+Protocol Verification: Successfully captured and verified the TCP 3-Way Handshake (SYN -> SYN-ACK -> ACK) between the Mint client and Ubuntu server.
+
+Traffic Patterns: Identified overhead traffic including ARP broadcasts and DNS queries that occur automatically upon boot, providing a baseline for "normal" network behavior.
+
+Troubleshooting: Resolved an initial connectivity issue where the Ubuntu server was unreachable; diagnosed as a subnet mismatch within the VirtualBox Network Manager.
 ## 🛠️ Troubleshooting & Resolution
 * **Issue:** Wireshark failed to see the network interface.
 * **Root Cause:** Improper bridging between VirtualBox and the host Ethernet adapter.
