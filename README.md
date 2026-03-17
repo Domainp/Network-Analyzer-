@@ -79,5 +79,5 @@ Primary Threat VectorMan-in-the-Middle (MitM): Since the analyzer can see all tr
 Vulnerability Assessment Clear text Protocols: During the lab, it was observed that internal traffic using non-encrypted protocols is fully visible. 
 This highlights the danger of relying on "internal" network security alone.
 Detection StrategyAbnormal Volume: A SOC analyst would look for a sudden spike in SYN packets without matching ACKs, which indicates a SYN Flood (DDoS) attack attempting to exhaust server resources.
-Hardening RecommendationEncryption & Micro-segmentation: 
+Hardening Recommendation Encryption & Micro-segmentation: 
 Implement SSH/TLS for all internal communications and use host-based firewalls (ufw or iptables) to restrict traffic to only necessary ports (e.g., 22, 443).### 4. Professional Skill MappingNetworking: Subnetting, NAT/Bridged configurations, Protocol analysis.Security: Traffic monitoring, vulnerability identification, MITRE ATT&CK alignment (Reconnaissance/Collection).Systems Admin: Linux CLI, Bash automation, Virtualization management.
